@@ -1,0 +1,78 @@
+@use "./helper/variables" as *;
+@use "./helper/placeholders";
+
+.crud__container {
+  .btn {
+    padding: 9px 0;
+
+    font-weight: 700;
+    font-size: $fz-nr;
+    color: $clr-text-sec;
+    text-transform: capitalize;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: $rounded-full;
+
+    opacity: 90%;
+    transition: all 0.3s;
+    background: linear-gradient(120deg, $clr-main, #5820b282);
+
+    &:hover {
+      letter-spacing: 1.1px;
+      opacity: 1;
+    }
+  }
+
+  .search__engine {
+    margin-top: 2.4rem;
+
+    .search-engine__btn {
+      @extend %fx-between-row;
+      gap: 20%;
+      z-index: 1;
+
+      .btn {
+        width: 50%;
+      }
+    }
+  }
+
+  .outputs-delete__eng {
+    .btn {
+      width: 100%;
+      margin: 10px 0;
+      margin-bottom: 50px;
+
+      &.disable {
+        z-index: -1;
+        transform: translateY(-44px);
+        pointer-events: none;
+        opacity: 0;
+      }
+    }
+  }
+
+  .edit__btn,
+  .delete__btn {
+    width: 6%;
+
+    .btn {
+      padding: 10px;
+    }
+  }
+
+  .edit__btn {
+    .btn {
+      background: #877223;
+      transform: rotate(90deg);
+    }
+  }
+
+  .delete__btn {
+    .btn {
+      background: #f3070f;
+    }
+  }
+}

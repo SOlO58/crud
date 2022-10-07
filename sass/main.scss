@@ -1,0 +1,60 @@
+@use "./helper/variables" as *;
+@use "./inputs";
+@use "./btns";
+@use "./table";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+
+  background: $clr-dark1;
+  color: $clr-text-st;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.crud__container {
+  margin: 50px 0;
+  width: 80%;
+}
+
+.cd__heading {
+  text-align: center;
+  margin-bottom: 2.4rem;
+
+  & p {
+    font-size: $fz-lg;
+  }
+}
+
+// transition: all .3s;
+// transform: translateX(-150%);
+// position: absolute;
+
+::-webkit-scrollbar {
+  // color: red;
+  width: 7px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #adb5bd46;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #adb5bda3;
+}

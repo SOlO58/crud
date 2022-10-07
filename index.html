@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/main.css" />
+    <title>CRUD || SYSTEM</title>
+  </head>
+  <body>
+    <section class="crud__container">
+      <!-- HEAD -->
+      <div class="cd__heading">
+        <h1>cruds</h1>
+        <p>product management system</p>
+      </div>
+
+      <!-- INPUTS-FORM -->
+      <div class="cd__inputs">
+        <form class="form__inputs">
+          <div class="form-inputs--st__row">
+            <input type="text" name="title" id="title" placeholder="title" />
+          </div>
+
+          <div class="form-inputs--sec__row" id="totalInputs">
+            <input type="number" name="price" id="price" placeholder="price" />
+            <input type="number" name="taxes" id="taxes" placeholder="taxes" />
+            <input type="number" name="ads" id="ads" placeholder="ads" />
+            <input
+              type="number"
+              name="discount"
+              id="discount"
+              placeholder="discount"
+            />
+            <small>0</small>
+          </div>
+
+          <div class="form-inputs--third__row">
+            <input type="number" name="count" id="count" placeholder="count" />
+            <input
+              type="text"
+              name="category"
+              id="category"
+              placeholder="category"
+            />
+            <button class="form-inputs__btn btn" id="createBtn">create</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- OUTPUTS-FORM -->
+      <div class="cd--outputs">
+        <div class="search__engine">
+          <input
+            onkeyup="SearchInput(this.value)"
+            type="search"
+            name=""
+            id="search"
+            placeholder="search"
+          />
+
+          <div class="search-engine__btn">
+            <button
+              onclick="searchBtn(this.id)"
+              class="btn"
+              id="searchTitleBtn"
+            >
+              search by title
+            </button>
+            <button
+              onclick="searchBtn(this.id)"
+              class="btn"
+              id="searchCategoryBtn"
+            >
+              search by category
+            </button>
+          </div>
+        </div>
+
+        <div class="outputs-delete__eng">
+          <button class="btn disable"></button>
+        </div>
+
+        <div class="table__container">
+          <table>
+            <thead>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>count</th>
+              <th>category</th>
+              <!-- <th>update</th>
+            <th>delete</th> -->
+            </thead>
+
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

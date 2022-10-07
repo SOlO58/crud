@@ -1,0 +1,64 @@
+@use "./helper/variables" as *;
+@use "./helper/placeholders";
+
+.crud__container {
+  .table__container {
+    background-color: #252525;
+
+    border-radius: $rounded-md;
+    padding: 15px 5px;
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    // filter: blur(10px);
+
+    thead {
+      font-size: $fz-lg;
+      text-transform: capitalize;
+
+      position: relative;
+
+      th {
+        padding: 16px 0;
+      }
+    }
+
+    tbody {
+      color: $clr-text-sec;
+
+      td {
+        padding: 7px 0;
+      }
+
+      td:nth-child(1) {
+        font-weight: bold;
+        color: rgb(174, 138, 225);
+      }
+    }
+
+    .category__data {
+      position: relative;
+      color: #fff;
+
+      &::after {
+        content: "";
+        width: 70%;
+        height: 60%;
+
+        position: absolute;
+        top: 20%;
+        left: 16%;
+
+        z-index: -1;
+        border-radius: $rounded-sm;
+        background-color: red;
+      }
+    }
+  }
+}

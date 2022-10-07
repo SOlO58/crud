@@ -1,0 +1,11 @@
+%inputs-gap {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+%fx-between-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

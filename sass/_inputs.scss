@@ -1,0 +1,81 @@
+@use "./helper/variables" as *;
+@use "./helper/placeholders";
+
+.crud__container {
+  input {
+    background-color: $clr-dark2;
+    outline: none;
+    border: none;
+
+    padding: 11px 9px;
+    border-radius: $rounded-sm;
+
+    color: $clr-text-st;
+    font-size: $fz-nr;
+    transition: all 0.5s;
+
+    &::placeholder {
+      color: $clr-text-sec;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: $fz-sm;
+    }
+
+    &:focus {
+      background-color: $clr-dark3;
+      transform: scale(1.04);
+      box-shadow: -3px -3px 9px rgba(34, 34, 34, 0.546),
+        3px 3px 7px rgba(0, 0, 0, 0.661);
+    }
+
+    &.disable {
+      z-index: -1;
+      transform: translateY(-44px);
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  .form-inputs--sec__row {
+    input {
+      margin-left: 4px;
+
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+
+    & small {
+      background-color: #ff0000bd;
+      position: absolute;
+      border-radius: $rounded-sm;
+      padding: 5px 3px;
+      transform: translateY(30%);
+      margin-left: 7px;
+
+      &::before {
+        content: "Total: ";
+        font-weight: 600;
+        color: $clr-text-st;
+      }
+    }
+  }
+}
+
+.form-inputs--st__row,
+.form-inputs--third__row,
+.search__engine {
+  > input {
+    width: 100%;
+
+    &:focus {
+      transform: scale(1.015);
+    }
+  }
+}
+
+.form__inputs,
+.form-inputs--third__row,
+.search__engine {
+  @extend %inputs-gap;
+}
